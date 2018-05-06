@@ -1,0 +1,19 @@
+body {
+    margin-top: 20%;
+}
+
+body .panel {
+    direction: rtl;
+}
+
+body .panel .form_title {
+    margin: 0 35%;
+    overflow-x: visible;
+}
+
+body .panel .inter_button {
+    margin-right: 80%;
+    min-width: 20%;
+}
+
+/*# sourceMappingURL=login.css.map */

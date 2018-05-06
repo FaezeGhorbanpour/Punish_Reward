@@ -1,0 +1,14 @@
+body {
+  margin-top: 20%;
+  .panel {
+    direction: rtl;
+    .form_title {
+      margin: 0 35%;
+      overflow-x: visible;
+    }
+    .inter_button {
+      margin-right: 80%;
+      min-width: 20%;
+    }
+  }
+}

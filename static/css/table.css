@@ -1,0 +1,47 @@
+/*
+Error: Invalid CSS after "  }": expected "}", was "{"
+        on line 14 of table.scss
+
+9:     text-rendering: optimizeLegibility;
+10:     -webkit-font-smoothing: antialiased;
+11:     -moz-osx-font-smoothing: grayscale;
+12:     font-kerning: auto;
+13:   }
+14: {
+15:   width: 100%;
+16:   margin: 15px 0 10px 0 !important;
+17:   color: #333;
+18:   background: white;
+19:   border: 1px solid #999 !important;
+
+Backtrace:
+table.scss:14
+E:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:1207:in `expected'
+E:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:1137:in `expected'
+E:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:1132:in `tok!'
+E:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:667:in `block'
+E:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:658:in `ruleset'
+E:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:684:in `block_child'
+E:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:674:in `block_contents'
+E:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:125:in `stylesheet'
+E:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:41:in `parse'
+E:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.24/lib/sass/engine.rb:406:in `_to_tree'
+E:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.24/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+E:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.24/lib/sass/engine.rb:298:in `render_with_sourcemap'
+E:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+E:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+E:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:209:in `each'
+E:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+E:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.24/lib/sass/plugin.rb:82:in `update_stylesheets'
+E:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.24/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
+E:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.24/lib/sass/exec/sass_scss.rb:51:in `process_result'
+E:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.24/lib/sass/exec/base.rb:52:in `parse'
+E:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.24/lib/sass/exec/base.rb:19:in `parse!'
+E:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.4.24/bin/scss:13:in `<top (required)>'
+E:/Ruby200/bin/scss:23:in `load'
+E:/Ruby200/bin/scss:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"  }\": expected \"}\", was \"{\"\A         on line 14 of table.scss\A \A 9:     text-rendering: optimizeLegibility;\A 10:     -webkit-font-smoothing: antialiased;\A 11:     -moz-osx-font-smoothing: grayscale;\A 12:     font-kerning: auto;\A 13:   }\A 14: {\A 15:   width: 100%;\A 16:   margin: 15px 0 10px 0 !important;\A 17:   color: #333;\A 18:   background: white;\A 19:   border: 1px solid #999 !important;"; }

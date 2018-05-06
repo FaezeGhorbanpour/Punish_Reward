@@ -1,0 +1,50 @@
+{% extends 'master/master.html' %}
+
+{% block special_static1 %}
+    {{ block.super }}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "css/table.scss" %}"/>
+{% endblock special_static1 %}
+
+{% block content %}
+    {{ block.super }}
+    <h2>افزودن روش های تنبیه و تشویق</h2>
+    <table data-table>
+        <thead>
+        <tr>
+            <th>تشویق یا تنبیه</th>
+            <th>توضیح</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr id="unique_id_1">
+            <td>تشویق</td>
+            <td>همینجوری :)</td>
+            <td>
+                <a href="#" onclick="view('unique_id_1')" data-caption="View"><i class="ion-eye"></i></a>
+                <a href="#" onclick="edit('unique_id_1')" data-caption="Edit"><i class="ion-edit"></i></a>
+                <a href="#" data-delete data-caption="Delete"><i class="ion-close"></i></a>
+            </td>
+        </tr>
+        <tr id="unique_id_2">
+            <td>تنبیه</td>
+            <td>دوست داشت</td>
+            <td>
+                <a href="#" onclick="view('unique_id_2')" data-caption="View"><i class="ion-eye"></i></a>
+                <a href="#" onclick="edit('unique_id_2')" data-caption="Edit"><i class="ion-edit"></i></a>
+                <a href="#" data-delete data-caption="Delete"><i class="ion-close"></i></a>
+            </td>
+        </tr>
+        <tr id="unique_id_3">
+            <td>تشویق</td>
+            <td>الکی</td>
+            <td>
+                <a href="#" onclick="view('unique_id_3')" data-caption="View"><i class="ion-eye"></i></a>
+                <a href="#" onclick="edit('unique_id_3')" data-caption="Edit"><i class="ion-edit"></i></a>
+                <a href="#" data-delete data-caption="Delete"><i class="ion-close"></i></a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+{% endblock content %}

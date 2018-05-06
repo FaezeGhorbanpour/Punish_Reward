@@ -1,0 +1,9 @@
+{% extends 'main.html' %}
+
+{% block menu %}
+    <li><a href="#">ویرایش اطلاعات کاربری</a></li>
+    <li class="active"><a href="{% url 'master:punish_page' %}">افزودن پاداش و تنبیه</a></li>
+    <li><a href="#">مشاهده معیارها</a></li>
+    <li><a href="#">تعیین ارزیابی کنندگان</a></li>
+    <li><a href="/logout/">خروج</a></li>
+{% endblock menu %}
