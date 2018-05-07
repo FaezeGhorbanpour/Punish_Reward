@@ -1,50 +1,63 @@
-{% extends 'master/master.html' %}
+{% extends 'main.html' %}
 
-{% block special_static1 %}
-    {{ block.super }}
+{% block special_static %}
     {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static "css/table.scss" %}"/>
-{% endblock special_static1 %}
+    <link rel="stylesheet" type="text/css" href="{% static "css/main.css" %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static "css/table.css" %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static "css/master/punish.css" %}"/>
+{% endblock special_static %}
+
+
+{% block menu %}
+    <li><a href="{% url 'master:employees_page' %}">کارمندان</a></li>
+    <li class="active"><a href="{% url 'master:punish_page' %}">پاداش و تنبیه</a></li>
+    <li><a href="#">معیارها</a></li>
+    <li><a href="#">تعیین ارزیابی کنندگان</a></li>
+    <li><a href="/logout/">خروج</a></li>
+{% endblock menu %}
+
+
+
 
 {% block content %}
-    {{ block.super }}
-    <h2>افزودن روش های تنبیه و تشویق</h2>
-    <table data-table>
+    <h2 class="page_title">تنبیه و تشویق</h2>
+
+    <table>
         <thead>
         <tr>
-            <th>تشویق یا تنبیه</th>
-            <th>توضیح</th>
-            <th></th>
+            <th class='prop__name type' data-prop-name='type'>نوع</th>
+            <th class='prop__name desc' data-prop-name='description'>توضیح</th>
+            <th class='prop__name action' data-prop-name='action'></th>
         </tr>
         </thead>
         <tbody>
-        <tr id="unique_id_1">
-            <td>تشویق</td>
-            <td>همینجوری :)</td>
-            <td>
-                <a href="#" onclick="view('unique_id_1')" data-caption="View"><i class="ion-eye"></i></a>
-                <a href="#" onclick="edit('unique_id_1')" data-caption="Edit"><i class="ion-edit"></i></a>
-                <a href="#" data-delete data-caption="Delete"><i class="ion-close"></i></a>
+        <tr class="odd">
+            <td class="prop__value" data-prop-name="type">تشویق</td>
+            <td class="prop__value" data-prop-name="description">همینجوری</td>
+            <td class="prop__value" data-prop-name="action">
+                <a href="#" data-caption="delete"><img class="ion-delete" src="images/delete.jpeg"></a>
+                <a href="#" data-caption="Edit"><img src="images/edit.jpeg" class="ion-edit"></a>
             </td>
         </tr>
-        <tr id="unique_id_2">
-            <td>تنبیه</td>
-            <td>دوست داشت</td>
-            <td>
-                <a href="#" onclick="view('unique_id_2')" data-caption="View"><i class="ion-eye"></i></a>
-                <a href="#" onclick="edit('unique_id_2')" data-caption="Edit"><i class="ion-edit"></i></a>
-                <a href="#" data-delete data-caption="Delete"><i class="ion-close"></i></a>
+        <tr class="even">
+            <td class="prop__value" data-prop-name="type">تنبیه</td>
+            <td class="prop__value" data-prop-name="description">دوست داشت :)</td>
+            <td class="prop__value" data-prop-name="action">
+                <a href="#" data-caption="View"><img class="ion-delete" src="images/delete.jpeg"></a>
+                <a href="#" data-caption="Edit"><img src="images/edit.jpeg" class="ion-edit"></a>
             </td>
         </tr>
-        <tr id="unique_id_3">
-            <td>تشویق</td>
-            <td>الکی</td>
-            <td>
-                <a href="#" onclick="view('unique_id_3')" data-caption="View"><i class="ion-eye"></i></a>
-                <a href="#" onclick="edit('unique_id_3')" data-caption="Edit"><i class="ion-edit"></i></a>
-                <a href="#" data-delete data-caption="Delete"><i class="ion-close"></i></a>
+        <tr class="odd">
+            <td class="prop__value" data-prop-name="type">تشویق</td>
+            <td class="prop__value" data-prop-name="description">الکی</td>
+            <td class="prop__value" data-prop-name="action">
+
+                <a href="#" data-caption="View"><img class="ion-delete" src="images/delete.jpeg"></a>
+                <a href="#" data-caption="Edit"><img src="images/edit.jpeg" class="ion-edit"></a>
             </td>
         </tr>
         </tbody>
     </table>
+    <a href="{% url 'master:add_punish' %}" type="button" class="btn btn-default btn-lg">افزودن پاداش جدید</a>
 {% endblock content %}
+

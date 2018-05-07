@@ -2,7 +2,15 @@
 
 {% block menu %}
     <li><a href="#">ویرایش اطلاعات کاربری</a></li>
-    <li class="active"><a href="#">مشاهده معیارها</a></li>
+    <li class="'active"><a href="{% url 'manager:criterion_page' %}">مشاهده معیارها</a></li>
     <li><a href="#">مشاهده درخواست های بازنگری</a></li>
     <li><a href="/logout/">خروج</a></li>
 {% endblock %}
+
+
+{% block special_static %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "css/main.css" %}"/>
+{% endblock special_static %}
+
+

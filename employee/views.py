@@ -6,3 +6,7 @@ from django.shortcuts import render
 
 def show_employee_page(request):
     return render(request, 'employee/employee.html')
+
+
+def show_review_page(request):
+    return render(request, 'employee/review.html')

@@ -1,9 +1,20 @@
 {% extends 'main.html' %}
 
+{% block special_static %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "css/main.css" %}"/>
+
+{% endblock special_static %}
+
+
 {% block menu %}
-    <li><a href="#">ویرایش اطلاعات کاربری</a></li>
-    <li class="active"><a href="{% url 'master:punish_page' %}">افزودن پاداش و تنبیه</a></li>
-    <li><a href="#">مشاهده معیارها</a></li>
+    <li><a href="{% url 'master:employees_page' %}">کارمندان</a></li>
+    <li><a href="{% url 'master:punish_page' %}">پاداش و تنبیه</a></li>
+    <li><a href="#">معیارها</a></li>
     <li><a href="#">تعیین ارزیابی کنندگان</a></li>
     <li><a href="/logout/">خروج</a></li>
 {% endblock menu %}
+
+
+
+

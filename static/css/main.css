@@ -9,11 +9,37 @@ body, html {
   body .container, html .container {
     margin: 0;
     padding: 0;
-    width: 100%; }
+      width: 100%;
+      background: #555;
+      color: #fff;
+  }
+
+body .container .main_content, html .container .main_content {
+    display: grid;
+}
+
+body .container .main_content .btn-default, html .container .main_content .btn-default {
+    padding: 10px;
+    float: left;
+    max-width: 20%;
+    margin: 5% auto;
+}
+
+body .page_title, html .page_title {
+    padding: 25% 5% 0 5%;
+}
 
 @media (min-width: 768px) {
   .container .full {
     height: 100%; }
+
+    .container .main_menu {
+        float: right;
+    }
+
+    .container .main_content {
+        float: right;
+    }
 
   .sidebar-nav .navbar .navbar-collapse {
     padding: 0;

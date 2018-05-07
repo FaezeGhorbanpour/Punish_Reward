@@ -7,18 +7,13 @@
 {% block special_static %}
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static "css/main.css" %}"/>
-    {% block special_static1 %}
-    {% endblock special_static1 %}
 {% endblock special_static %}
 
 {% block body_block %}
     <div class="container">
         <div class="row full">
-            <div class="col-sm-9">
-                {% block content %}
-                {% endblock content %}
-            </div>
-            <div class="col-sm-3 full">
+
+            <div class="col-sm-3 full main_menu">
                 <div class="sidebar-nav full">
                     <div class="navbar navbar-default full" role="navigation">
                         <div class="navbar-header">
@@ -35,6 +30,10 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="col-sm-8  main_content">
+                {% block content %}
+                {% endblock content %}
             </div>
 
         </div>

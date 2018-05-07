@@ -1,0 +1,58 @@
+{% extends 'main.html' %}
+
+{% block menu %}
+    <li><a href="#">ویرایش اطلاعات کاربری</a></li>
+    <li class="'active"><a href="{% url 'manager:criterion' %}">مشاهده معیارها</a></li>
+    <li><a href="#">مشاهده درخواست های بازنگری</a></li>
+    <li><a href="/logout/">خروج</a></li>
+{% endblock %}
+
+
+{% block special_static %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "css/main.css" %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static "css/table.css" %}"/>
+{% endblock special_static %}
+
+
+{% block content %}
+    <h2 class="page_title">معیار</h2>
+
+    <table>
+        <thead>
+        <tr>
+            <th class='prop__name type' data-prop-name="name">نام</th>
+            <th class='prop__name desc' data-prop-name='type'>نوع</th>
+            <th class='prop__name action' data-prop-name='action'></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="odd">
+            <td class="prop__value" data-prop-name="name">نظم زمانی</td>
+            <td class="prop__value" data-prop-name="type">کیفی</td>
+            <td class="prop__value" data-prop-name="action">
+                <a href="#" data-caption="delete"><img class="ion-delete" src="images/delete.jpeg"></a>
+                <a href="#" data-caption="Edit"><img src="images/edit.jpeg" class="ion-edit"></a>
+            </td>
+        </tr>
+        <tr class="even">
+            <td class="prop__value" data-prop-name="name">همکاری</td>
+            <td class="prop__value" data-prop-name="type">کیفی</td>
+            <td class="prop__value" data-prop-name="action">
+                <a href="#" data-caption="View"><img class="ion-delete" src="images/delete.jpeg"></a>
+                <a href="#" data-caption="Edit"><img src="images/edit.jpeg" class="ion-edit"></a>
+            </td>
+        </tr>
+        <tr class="odd">
+            <td class="prop__value" data-prop-name="name">ساعت مفید</td>
+            <td class="prop__value" data-prop-name="type">کمی</td>
+            <td class="prop__value" data-prop-name="action">
+
+                <a href="#" data-caption="View"><img class="ion-delete" src="images/delete.jpeg"></a>
+                <a href="#" data-caption="Edit"><img src="images/edit.jpeg" class="ion-edit"></a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <a href="{% url 'manager:add_criterion' %}" type="button" class="btn btn-default btn-lg">افزودن معیار جدید</a>
+{% endblock content %}
