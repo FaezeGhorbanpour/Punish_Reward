@@ -10,3 +10,7 @@ def show_employee_page(request):
 
 def show_review_page(request):
     return render(request, 'employee/review.html')
+
+
+def edit_employee_page(request):
+    return render(request, 'employee/edit_employee.html')

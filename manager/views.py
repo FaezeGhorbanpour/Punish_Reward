@@ -14,3 +14,7 @@ def show_criterion_page(request):
 
 def add_criterion_page(request):
     return render(request, 'manager/add_criterion.html')
+
+
+def edit_manager_page(request):
+    return render(request, 'manager/edit_manager.html')

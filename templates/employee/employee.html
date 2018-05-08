@@ -5,7 +5,7 @@
 {% endblock special_static %}
 
 {% block menu %}
-    <li><a href="#">ویرایش اطلاعات کاربری</a></li>
+    <li><a href="{% url 'employee:edit_employee' %}">ویرایش اطلاعات کاربری</a></li>
     <li><a href="{% url 'employee:review_page' %}">مشاهده ارزیابی های شخصی</a></li>
     <li><a href="#">وارد کردن متغیرهای ارزیابی خود</a></li>
     <li><a href="/logout/">خروج</a></li>

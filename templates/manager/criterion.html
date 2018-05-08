@@ -1,8 +1,8 @@
 {% extends 'main.html' %}
 
 {% block menu %}
-    <li><a href="#">ویرایش اطلاعات کاربری</a></li>
-    <li class="'active"><a href="{% url 'manager:criterion' %}">مشاهده معیارها</a></li>
+    <li><a href="{% url 'manager:edit_manager' %}">ویرایش اطلاعات کاربری</a></li>
+    <li class="'active"><a href="{% url 'manager:criterion_page' %}">مشاهده معیارها</a></li>
     <li><a href="#">مشاهده درخواست های بازنگری</a></li>
     <li><a href="/logout/">خروج</a></li>
 {% endblock %}
@@ -31,25 +31,30 @@
             <td class="prop__value" data-prop-name="name">نظم زمانی</td>
             <td class="prop__value" data-prop-name="type">کیفی</td>
             <td class="prop__value" data-prop-name="action">
-                <a href="#" data-caption="delete"><img class="ion-delete" src="images/delete.jpeg"></a>
-                <a href="#" data-caption="Edit"><img src="images/edit.jpeg" class="ion-edit"></a>
+                <a href="#" data-caption="delete"><img class="ion-delete" src="{% static 'images/delete.png' %}"
+                                                       height="20" width="20"></a>
+                <a href="#" data-caption="Edit"><img src="{% static 'images/edit.png' %}" height="20" width="20"
+                                                     class="ion-edit"></a>
             </td>
         </tr>
         <tr class="even">
             <td class="prop__value" data-prop-name="name">همکاری</td>
             <td class="prop__value" data-prop-name="type">کیفی</td>
             <td class="prop__value" data-prop-name="action">
-                <a href="#" data-caption="View"><img class="ion-delete" src="images/delete.jpeg"></a>
-                <a href="#" data-caption="Edit"><img src="images/edit.jpeg" class="ion-edit"></a>
+                <a href="#" data-caption="delete"><img class="ion-delete" src="{% static 'images/delete.png' %}"
+                                                       height="20" width="20"></a>
+                <a href="#" data-caption="Edit"><img src="{% static 'images/edit.png' %}" height="20" width="20"
+                                                     class="ion-edit"></a>
             </td>
         </tr>
         <tr class="odd">
             <td class="prop__value" data-prop-name="name">ساعت مفید</td>
             <td class="prop__value" data-prop-name="type">کمی</td>
             <td class="prop__value" data-prop-name="action">
-
-                <a href="#" data-caption="View"><img class="ion-delete" src="images/delete.jpeg"></a>
-                <a href="#" data-caption="Edit"><img src="images/edit.jpeg" class="ion-edit"></a>
+                <a href="#" data-caption="delete"><img class="ion-delete" src="{% static 'images/delete.png' %}"
+                                                       height="20" width="20"></a>
+                <a href="#" data-caption="Edit"><img src="{% static 'images/edit.png' %}" height="20" width="20"
+                                                     class="ion-edit"></a>
             </td>
         </tr>
         </tbody>

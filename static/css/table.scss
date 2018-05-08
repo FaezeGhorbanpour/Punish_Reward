@@ -1,34 +1,4 @@
-$sortcols: 'firstName', 'lastName', 'birth';
 
-%sortcol {
-  background: rgba(navy, .15);
-  text-shadow: 0 1px #eee;
-
-  &:before {
-    box-shadow: 0 0 .5em navy;
-  }
-
-  &.prop__name {
-    color: lightcyan;
-
-    &[data-dir='1']:after {
-      content: '▲';
-    }
-    &[data-dir='-1']:after {
-      content: '▼';
-    }
-  }
-}
-
-* {
-  box-sizing: inherit;
-}
-
-body {
-  background: #555;
-  font: 1em/1.25 trebuchet ms, verdana, sans-serif;
-  color: #fff;
-}
 
 table {
   font-size: 120%;
@@ -102,13 +72,6 @@ tr {
   }
 }
 
-@each $col in $sortcols {
-  [data-sort-by='#{$col}'] {
-    [data-prop-name='#{$col}'] {
-      @extend %sortcol;
-    }
-  }
-}
 
 .btn {
   margin: .2em .1em; // Demo Only

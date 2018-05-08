@@ -1,8 +1,8 @@
 {% extends 'main.html' %}
 
 {% block menu %}
-    <li><a href="#">ویرایش اطلاعات کاربری</a></li>
-    <li><a href="{% url 'employee:review_page' %}">مشاهده ارزیابی های شخصی</a></li>
+    <li><a href="{% url 'employee:edit_employee' %}">ویرایش اطلاعات کاربری</a></li>
+    <li class="active"><a href="{% url 'employee:review_page' %}">مشاهده ارزیابی های شخصی</a></li>
     <li><a href="#">وارد کردن متغیرهای ارزیابی خود</a></li>
     <li><a href="/logout/">خروج</a></li>
 {% endblock %}
@@ -13,7 +13,6 @@
     <link rel="stylesheet" criterion="text/css" href="{% static "css/main.css" %}"/>
     <link rel="stylesheet" criterion="text/css" href="{% static "css/table.css" %}"/>
 {% endblock special_static %}
-
 
 
 {% block content %}
@@ -32,21 +31,24 @@
             <td class="prop__value" data-prop-name="criterion">سر وقت آمدن</td>
             <td class="prop__value" data-prop-name="type">تشویق</td>
             <td class="prop__value" data-prop-name="action">
-                <a href="#" data-caption="review"><img class="ion-review" src="images/review.png"></a>
+                <a href="#" data-caption="review"><img class="ion-review" src="{% static 'images/review.png' %}"
+                                                       height="30" width="30"></a>
             </td>
         </tr>
         <tr class="even">
             <td class="prop__value" data-prop-name="criterion">خوابیدن سر کار</td>
             <td class="prop__value" data-prop-name="type">تنبیه</td>
             <td class="prop__value" data-prop-name="action">
-                <a href="#" data-caption="review"><img class="ion-review" src="images/review.png"></a>
+                <a href="#" data-caption="review"><img class="ion-review" src="{% static 'images/review.png' %}"
+                                                       height="30" width="30"></a>
             </td>
         </tr>
         <tr class="odd">
             <td class="prop__value" data-prop-name="criterion">همکاری زیاد</td>
             <td class="prop__value" data-prop-name="type">تشویق</td>
             <td class="prop__value" data-prop-name="action">
-                <a href="#" data-caption="review"><img class="ion-review" src="images/review.png"></a>
+                <a href="#" data-caption="review"><img class="ion-review" src="{% static 'images/review.png' %}"
+                                                       height="30" width="30"></a>
             </td>
         </tr>
         </tbody>
