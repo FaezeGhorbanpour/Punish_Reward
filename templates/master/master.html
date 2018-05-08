@@ -10,7 +10,7 @@
 {% block menu %}
     <li><a href="{% url 'master:employees_page' %}">کارمندان</a></li>
     <li><a href="{% url 'master:punish_page' %}">پاداش و تنبیه</a></li>
-    <li><a href="#">معیارها</a></li>
+    <li><a href="{% url 'master:criterion_page'%}">معیارها</a></li>
     <li><a href="#">تعیین ارزیابی کنندگان</a></li>
     <li><a href="/logout/">خروج</a></li>
 {% endblock menu %}

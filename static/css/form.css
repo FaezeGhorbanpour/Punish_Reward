@@ -1,0 +1,24 @@
+.form-area {
+  text-align: right;
+  color: GREY;
+  font-size: 120%;
+  direction: rtl;
+  margin: 2em auto;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-collapse: collapse;
+  min-width: 23em;
+  width: 70%;
+  max-width: 56em;
+  border-radius: .5em;
+  box-shadow: 0 0 .5em #000;
+  background-color: #FAFAFA;
+  padding: 10px 40px 20px;
+  border: 1px solid GREY; }
+  .form-area select, .form-area textarea, .form-area input {
+    min-width: 70%; }
+  .form-area label {
+    float: right;
+    min-width: 20%; }
+
+/*# sourceMappingURL=form.css.map */

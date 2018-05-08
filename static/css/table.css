@@ -1,90 +1,79 @@
 table {
-    font-size: 120%;
-    direction: rtl;
-    text-align: center;
-    box-sizing: border-box;
-    overflow: hidden;
-    margin: 2em auto;
-    border-collapse: collapse;
-    min-width: 23em;
-    width: 70%;
-    max-width: 56em;
-    border-radius: .5em;
-    box-shadow: 0 0 .5em #000;
-}
+  font-size: 120%;
+  direction: rtl;
+  text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 2em auto;
+  border-collapse: collapse;
+  min-width: 23em;
+  width: 70%;
+  max-width: 56em;
+  border-radius: .5em;
+  box-shadow: 0 0 .5em #000; }
+  table .imglink {
+    width: 60px;
+    height: 60px;
+    margin: 0;
+    padding: 0; }
 
 thead {
-    background: linear-gradient(#606062, #28262b);
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    cursor: pointer;
-}
+  background: linear-gradient(#606062, #28262b);
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer; }
 
 th {
-    text-align: center;
-}
+  text-align: center; }
 
 tbody {
-    display: flex;
-    flex-direction: column;
-    color: #000;
-}
+  display: flex;
+  flex-direction: column;
+  color: #000; }
 
 tr {
-    display: block;
-    overflow: hidden;
-    width: 100%;
-}
+  display: block;
+  overflow: hidden;
+  width: 100%; }
 
 .odd {
-    background: linear-gradient(#eee 1px, #ddd 1px, #ccc calc(100% - 1px), #999 calc(100% - 1px));
-}
+  background: linear-gradient(#eee 1px, #ddd 1px, #ccc calc(100% - 1px), #999 calc(100% - 1px)); }
 
 .even {
-    background: linear-gradient(#eee 1px, #bbb 1px, #aaa calc(100% - 1px), #999 calc(100% - 1px));
-}
+  background: linear-gradient(#eee 1px, #bbb 1px, #aaa calc(100% - 1px), #999 calc(100% - 1px)); }
 
 [class*='prop__'] {
-    float: right;
-    position: relative;
-    padding: .5em 1em;
-    width: 40%;
-}
-
-[class*='prop__']:last-child {
-    width: 20%;
-}
-
-[class*='prop__']:before {
+  float: right;
+  position: relative;
+  padding: .5em 1em;
+  width: 40%; }
+  [class*='prop__']:last-child {
+    width: 20%; }
+  [class*='prop__']:before {
     position: absolute;
     top: -.5em;
     right: 0;
     bottom: -5em;
     left: 0;
-    content: "";
-}
-
-[class*='prop__']:after {
+    content: ""; }
+  [class*='prop__']:after {
     position: absolute;
-    right: .5em;
-}
+    right: .5em; }
 
 .btn {
-    margin: .2em .1em;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 700;
-    font-size: 1em;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    border: none;
-    border-bottom: .15em solid black;
-    border-radius: 3px;
-    padding: 0.65em 1.3em;
-}
+  margin: .2em .1em;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: none;
+  border-bottom: .15em solid black;
+  border-radius: 3px;
+  padding: 0.65em 1.3em; }
 
 .btn-lg {
-    padding: 1em 2em;
-}
+  padding: 1em 2em; }
 
 /*# sourceMappingURL=table.css.map */

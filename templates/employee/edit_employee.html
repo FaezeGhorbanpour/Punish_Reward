@@ -1,4 +1,4 @@
-{% extends 'main.html' %}
+{% extends 'employee/employee.html' %}
 
 {% block special_static %}
     {% load static %}
@@ -6,13 +6,6 @@
     <link rel="stylesheet" type="text/css" href="{% static "css/form.css" %}"/>
 {% endblock special_static %}
 
-
-{% block menu %}
-    <li class="active"><a href="{% url 'employee:edit_employee' %}">ویرایش اطلاعات کاربری</a></li>
-    <li><a href="{% url 'employee:review_page' %}">مشاهده ارزیابی های شخصی</a></li>
-    <li><a href="#">وارد کردن متغیرهای ارزیابی خود</a></li>
-    <li><a href="/logout/">خروج</a></li>
-{% endblock %}
 
 
 {% block content %}

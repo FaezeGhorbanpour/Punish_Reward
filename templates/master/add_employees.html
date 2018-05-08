@@ -1,4 +1,4 @@
-{% extends 'main.html' %}
+{% extends 'master/master.html' %}
 
 {% block special_static %}
     {% load static %}
@@ -7,13 +7,6 @@
 {% endblock special_static %}
 
 
-{% block menu %}
-    <li class="active"><a href="{% url 'master:employees_page' %}">کارمندان</a></li>
-    <li><a href="{% url 'master:punish_page' %}">پاداش و تنبیه</a></li>
-    <li><a href="#">معیارها</a></li>
-    <li><a href="#">تعیین ارزیابی کنندگان</a></li>
-    <li><a href="/logout/">خروج</a></li>
-{% endblock menu %}
 
 {% block content %}
     <h2 class="page_title">افزودن کارمند</h2>
@@ -30,9 +23,13 @@
                 </div>
                 <div class="form-group">
                     <label for="code">کد پرسنلی</label><input type="text" class="form-control" id="code"
-                                                              name="mobile">
+                                                              name="code">
                 </div>
 
+                <div class="form-group">
+                    <label for="job">منسب</label><input type="text" class="form-control" id="job"
+                                                              name="job">
+                </div>
                 <button type="button" id="submit" name="submit" class="btn btn-default btn-lg">ذخیره</button>
                 <a href="{% url 'master:employees_page' %}" type="button" class="btn btn-default btn-lg">بازگشت</a>
             </form>

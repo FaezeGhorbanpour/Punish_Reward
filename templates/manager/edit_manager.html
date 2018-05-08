@@ -1,4 +1,4 @@
-{% extends 'main.html' %}
+{% extends 'manager/manager.html' %}
 
 {% block special_static %}
     {% load static %}
@@ -6,14 +6,6 @@
     <link rel="stylesheet" type="text/css" href="{% static "css/form.css" %}"/>
 {% endblock special_static %}
 
-
-
-{% block menu %}
-    <li class="active"><a href="{% url 'manager:edit_manager' %}">ویرایش اطلاعات کاربری</a></li>
-    <li><a href="{% url 'manager:criterion_page' %}">مشاهده معیارها</a></li>
-    <li><a href="#">مشاهده درخواست های بازنگری</a></li>
-    <li><a href="/logout/">خروج</a></li>
-{% endblock %}
 
 
 {% block content %}

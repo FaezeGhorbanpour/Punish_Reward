@@ -1,17 +1,14 @@
-{% extends 'main.html' %}
+{% extends 'manager/manager.html' %}
 
-{% block menu %}
-    <li><a href="{% url 'manager:edit_manager' %}">ویرایش اطلاعات کاربری</a></li>
-    <li class="'active"><a href="{% url 'manager:criterion_page' %}">مشاهده معیارها</a></li>
-    <li><a href="#">مشاهده درخواست های بازنگری</a></li>
-    <li><a href="/logout/">خروج</a></li>
-{% endblock %}
+
+
 
 
 {% block special_static %}
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static "css/main.css" %}"/>
     <link rel="stylesheet" type="text/css" href="{% static "css/table.css" %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static "css/table_5_columns.css" %}"/>
 {% endblock special_static %}
 
 
@@ -23,6 +20,8 @@
         <tr>
             <th class='prop__name type' data-prop-name="name">نام</th>
             <th class='prop__name desc' data-prop-name='type'>نوع</th>
+            <th class='prop__name pun_rew' data-prop-name='pun_rew'>پاداش و تنبیه</th>
+            <th class='prop__name des' data-prop-name='des'>توضیح</th>
             <th class='prop__name action' data-prop-name='action'></th>
         </tr>
         </thead>
@@ -30,31 +29,37 @@
         <tr class="odd">
             <td class="prop__value" data-prop-name="name">نظم زمانی</td>
             <td class="prop__value" data-prop-name="type">کیفی</td>
+            <td class='prop__name pun_rew' data-prop-name='pun_rew'>ست نشده است.</td>
+            <td class='prop__name des' data-prop-name='des'></td>
             <td class="prop__value" data-prop-name="action">
-                <a href="#" data-caption="delete"><img class="ion-delete" src="{% static 'images/delete.png' %}"
+                <a href="#" class="imglink"><img class="ion-delete" src="{% static 'images/delete.png' %}"
                                                        height="20" width="20"></a>
-                <a href="#" data-caption="Edit"><img src="{% static 'images/edit.png' %}" height="20" width="20"
-                                                     class="ion-edit"></a>
+                <img src="{% static 'images/edit.png' %}" height="20" width="20"
+                                                     ><a href="{% url 'manager:add_criterion' %}" data-caption="Edit"></a>
             </td>
         </tr>
         <tr class="even">
             <td class="prop__value" data-prop-name="name">همکاری</td>
             <td class="prop__value" data-prop-name="type">کیفی</td>
+            <td class='prop__name pun_rew' data-prop-name='pun_rew'>تشویق</td>
+            <td class='prop__name des' data-prop-name='des'>همینجوری</td>
             <td class="prop__value" data-prop-name="action">
-                <a href="#" data-caption="delete"><img class="ion-delete" src="{% static 'images/delete.png' %}"
+                <a href="#"  class="imglink"><img src="{% static 'images/delete.png' %}"
                                                        height="20" width="20"></a>
-                <a href="#" data-caption="Edit"><img src="{% static 'images/edit.png' %}" height="20" width="20"
-                                                     class="ion-edit"></a>
+                <a href="{% url 'manager:add_criterion' %}"  class="imglink"><img src="{% static 'images/edit.png' %}" height="20" width="20"
+                                                     ></a>
             </td>
         </tr>
         <tr class="odd">
             <td class="prop__value" data-prop-name="name">ساعت مفید</td>
             <td class="prop__value" data-prop-name="type">کمی</td>
+            <td class='prop__name pun_rew' data-prop-name='pun_rew'>تشویق</td>
+            <td class='prop__name des' data-prop-name='des'>همینجوری</td>
             <td class="prop__value" data-prop-name="action">
-                <a href="#" data-caption="delete"><img class="ion-delete" src="{% static 'images/delete.png' %}"
+                <a href="#" class="imglink"><img class="ion-delete" src="{% static 'images/delete.png' %}"
                                                        height="20" width="20"></a>
-                <a href="#" data-caption="Edit"><img src="{% static 'images/edit.png' %}" height="20" width="20"
-                                                     class="ion-edit"></a>
+                <a href="{% url 'manager:add_criterion' %}" class="imglink"><img src="{% static 'images/edit.png' %}" height="20" width="20"
+                                                     ></a>
             </td>
         </tr>
         </tbody>

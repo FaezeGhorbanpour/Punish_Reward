@@ -3,7 +3,7 @@
 {% block menu %}
     <li><a href="{% url 'manager:edit_manager' %}">ویرایش اطلاعات کاربری</a></li>
     <li><a href="{% url 'manager:criterion_page' %}">مشاهده معیارها</a></li>
-    <li><a href="#">مشاهده درخواست های بازنگری</a></li>
+    <li><a href="{% url 'manager:request_page' %}">مشاهده درخواست های بازنگری</a></li>
     <li><a href="/logout/">خروج</a></li>
 {% endblock %}
 

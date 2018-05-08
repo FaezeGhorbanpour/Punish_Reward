@@ -1,11 +1,5 @@
-{% extends 'main.html' %}
+{% extends 'employee/employee.html' %}
 
-{% block menu %}
-    <li><a href="{% url 'employee:edit_employee' %}">ویرایش اطلاعات کاربری</a></li>
-    <li class="active"><a href="{% url 'employee:review_page' %}">مشاهده ارزیابی های شخصی</a></li>
-    <li><a href="#">وارد کردن متغیرهای ارزیابی خود</a></li>
-    <li><a href="/logout/">خروج</a></li>
-{% endblock %}
 
 
 {% block special_static %}
@@ -31,7 +25,7 @@
             <td class="prop__value" data-prop-name="criterion">سر وقت آمدن</td>
             <td class="prop__value" data-prop-name="type">تشویق</td>
             <td class="prop__value" data-prop-name="action">
-                <a href="#" data-caption="review"><img class="ion-review" src="{% static 'images/review.png' %}"
+                <a href="#" class="imglink"><img class="ion-review" src="{% static 'images/review.png' %}"
                                                        height="30" width="30"></a>
             </td>
         </tr>
@@ -39,7 +33,7 @@
             <td class="prop__value" data-prop-name="criterion">خوابیدن سر کار</td>
             <td class="prop__value" data-prop-name="type">تنبیه</td>
             <td class="prop__value" data-prop-name="action">
-                <a href="#" data-caption="review"><img class="ion-review" src="{% static 'images/review.png' %}"
+                <a href="#" class="imglink"><img class="ion-review" src="{% static 'images/review.png' %}"
                                                        height="30" width="30"></a>
             </td>
         </tr>
@@ -47,7 +41,7 @@
             <td class="prop__value" data-prop-name="criterion">همکاری زیاد</td>
             <td class="prop__value" data-prop-name="type">تشویق</td>
             <td class="prop__value" data-prop-name="action">
-                <a href="#" data-caption="review"><img class="ion-review" src="{% static 'images/review.png' %}"
+                <a href="#" class="imglink"><img class="ion-review" src="{% static 'images/review.png' %}"
                                                        height="30" width="30"></a>
             </td>
         </tr>

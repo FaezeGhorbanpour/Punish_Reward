@@ -13,6 +13,16 @@ table {
   max-width: 56em;
   border-radius: .5em;
   box-shadow: 0 0 .5em #000;
+
+      .imglink{
+        width: 60px;
+        height:60px;
+        margin:0;
+        padding: 0;
+      }
+
+
+
 }
 
 thead {
@@ -89,5 +99,3 @@ tr {
 .btn-lg {
   padding: 1em 2em;
 }
-
-

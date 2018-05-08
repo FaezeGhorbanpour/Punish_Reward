@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,iBAAkB;EAChB,KAAK,EAAE,GAAG",
+"sources": ["table_5_columns.scss"],
+"names": [],
+"file": "table_5_columns.css"
+}
