@@ -20,13 +20,13 @@ def add_employees_page(request):
     return render(request, 'master/add_employees.html')
 
 def add_criterion(request):
-    return render(request, 'master/add_criterion.html')
+    return render(request, 'master/../templates/employee/add_criterion.html')
 
 def show_employees_page(request):
     return render(request, 'master/show_employees.html')
 
 def show_criterion_page(request):
-    return render(request, 'master/criterion.html')
+    return render(request, 'master/../templates/employee/criterion.html')
 
 
 def edit_punish_page(reqeust):

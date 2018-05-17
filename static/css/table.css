@@ -50,16 +50,6 @@ tr {
   width: 40%; }
   [class*='prop__']:last-child {
     width: 20%; }
-  [class*='prop__']:before {
-    position: absolute;
-    top: -.5em;
-    right: 0;
-    bottom: -5em;
-    left: 0;
-    content: ""; }
-  [class*='prop__']:after {
-    position: absolute;
-    right: .5em; }
 
 .btn {
   margin: .2em .1em;

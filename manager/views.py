@@ -9,11 +9,11 @@ def show_manager_page(request):
 
 
 def show_criterion_page(request):
-    return render(request, 'manager/criterion.html')
+    return render(request, 'manager/../templates/master/criterion.html')
 
 
 def add_criterion_page(request):
-    return render(request, 'manager/add_criterion.html')
+    return render(request, 'manager/../templates/master/add_criterion.html')
 
 
 def edit_manager_page(request):

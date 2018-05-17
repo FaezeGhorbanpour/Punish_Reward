@@ -17,14 +17,14 @@
         <thead>
         <tr>
             <th class='prop__name type' data-prop-name='type'>نوع</th>
-            <th class='prop__name desc' data-prop-name='description'>توضیح</th>
+            <th class='prop__name desc' data-prop-name='description'>نام</th>
             <th class='prop__name action' data-prop-name='action'></th>
         </tr>
         </thead>
         <tbody>
         <tr class="odd">
             <td class="prop__value" data-prop-name="type">تشویق</td>
-            <td class="prop__value" data-prop-name="description">همینجوری</td>
+            <td class="prop__value" data-prop-name="description">ترفیع رتبه</td>
             <td class="prop__value" data-prop-name="action">
                 <a href="#" class="imglink"><img class="ion-delete" src="{% static 'images/delete.png' %}"
                                                        height="20" width="20"></a>
@@ -34,7 +34,7 @@
         </tr>
         <tr class="even">
             <td class="prop__value" data-prop-name="type">تنبیه</td>
-            <td class="prop__value" data-prop-name="description">دوست داشت :)</td>
+            <td class="prop__value" data-prop-name="description">کاهش حقوق</td>
             <td class="prop__value" data-prop-name="action">
                 <a href="#" class="imglink"><img class="ion-delete" src="{% static 'images/delete.png' %}"
                                                        height="20" width="20"></a>
@@ -44,7 +44,7 @@
         </tr>
         <tr class="odd">
             <td class="prop__value" data-prop-name="type">تشویق</td>
-            <td class="prop__value" data-prop-name="description">الکی</td>
+            <td class="prop__value" data-prop-name="description">جایزه</td>
             <td class="prop__value" data-prop-name="action">
                 <a href="#" class="imglink"><img class="ion-delete" src="{% static 'images/delete.png' %}"
                                                        height="20" width="20"></a>
@@ -54,6 +54,6 @@
         </tr>
         </tbody>
     </table>
-    <a href="{% url 'master:add_punish' %}" type="button" class="btn btn-default btn-lg">افزودن پاداش جدید</a>
+    <a href="{% url 'master:add_punish' %}" type="button" class="btn btn-default btn-lg">افزودن روش جدید</a>
 {% endblock content %}
 
