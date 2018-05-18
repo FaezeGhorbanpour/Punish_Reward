@@ -23,7 +23,7 @@ urlpatterns = [
     path(r'admin/', admin.site.urls),
     path('', views.show_base_page, name='login'),
     path(r'master/', include('master.urls', namespace='master')),
-    path(r'employee/', include('employee.urls', namespace='employee')),
+    path(r'evaluator/', include('employee.urls', namespace='evaluator')),
     path(r'manager/', include('manager.urls', namespace='manager')),
     path(r'logout/', views.logout, name='logout')
 ]

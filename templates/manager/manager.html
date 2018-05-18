@@ -1,16 +1,34 @@
 {% extends 'main.html' %}
 
-{% block menu %}
-    <li><a href="{% url 'manager:edit_manager' %}">ویرایش اطلاعات کاربری</a></li>
-    <li><a href="{% url 'manager:criterion_page' %}">مشاهده معیارها</a></li>
-    <li><a href="{% url 'manager:request_page' %}">مشاهده درخواست های بازنگری</a></li>
-    <li><a href="/logout/">خروج</a></li>
-{% endblock %}
-
-
 {% block special_static %}
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static "css/main.css" %}"/>
+
 {% endblock special_static %}
+
+
+{% block menu %}
+    <li>
+        <a href="#">واحد</a>
+          <ul class="noJS">
+            <li><a href="{% url 'manager:view_employees' %}">مشاهده کارمندان</a></li>
+              <li><a href="{% url 'manager:view_evaluator' %}">مشاهده ارزیابی کنندگان</a></li>
+
+            <li><a href="{% url 'manager:add_evaluator' %}">افزودن ارزیابی کننده</a></li>
+               <li><a href="{% url 'manager:add_employee' %}">افزودن کارمند</a></li>
+              <li><a href="{% url 'manager:view_re-evaluation_request' %}">مشاهده درخواست های ارزیابی مجدد</a></li>
+          </ul>
+    </li>
+    <li>
+        <a href="#">معیار</a>
+          <ul class="noJS">
+            <li><a href="{% url 'manager:view_criteria' %}">مشاهده معیارها</a></li>
+
+          </ul>
+    </li>
+    <li><a href="/logout/">خروج</a></li>
+{% endblock menu %}
+
+
 
 

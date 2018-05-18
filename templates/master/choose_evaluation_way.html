@@ -1,0 +1,89 @@
+{% extends 'master/master.html' %}
+
+
+{% block special_static %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "css/main.css" %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static "css/form.css" %}"/>
+    <script>
+    $(function() {
+        var type = 'kami';
+        $(".criterion_type").click(function(e) { // limit click to children of mainmenue
+            if ($(this).val() != type){
+                type = $(this).val();
+                if (type=='kami'){
+                     $('.kami').css("display", "block");
+                     $('.keyfi').css("display", "none");
+                }else if (type == 'keyfi'){
+                    $('.keyfi').css("display", "block");
+                    $('.kami').css("display", "none");
+                }else{
+                    $('.kami').css("display", "block");
+                    $('.keyfi').css("display", "block");
+                }
+            }
+
+            e.stopPropagation();
+        });
+    });
+    </script>
+{% endblock special_static %}
+
+
+{% block content %}
+    <h2 class="page_title">تعیین روش ارزیابی برای معیار همکاری1</h2>
+    <div class="col-md-8 center_view">
+        <div class="form-area">
+            <form role="form">
+                <br style="clear:both">
+
+                <div class="form-group">
+                    <label for="type"> نوع
+                    </label>
+                    <select class="criterion_type form-control">
+                        <option value="kami">کمی</option>
+                        <option value="keyfi">کیفی</option>
+                        <option value="kami-keyfi">کمی-کیفی</option>
+                    </select>
+                </div>
+                <div class="keyfi">
+                    <div class="form-group">
+                    <label for="type">دسته مقادیر کیفی
+                    </label>
+                    <select name="collection" class="form-control">
+                        <option value="">خوب - متوسط - بد</option>
+                        <option value="">فعال - نرمال - غیرفعال</option>
+                    </select>
+                </div>
+                </div>
+                <div class="kami">
+                <div class="form-group">
+                    <label for="input_number">تعداد متغییرها</label>
+                    <input type="number" class="form-control" id="input_number" name="input_number"/>
+                </div>
+                <div class="form-group">
+                    <label for="var1">متغییر 1</label>
+                    <select name="var1" class="form-control">
+                        <option value="">ساعت کاری در یک روز</option>
+                        <option value="">ساعت فوق العاده</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="input_number">متغییر 2</label>
+                    <select name="var2" class="form-control">
+                        <option value="">ساعت کاری در یک روز</option>
+                        <option value="">ساعت فوق العاده</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="formula">فرمول</label>
+                    <input type="text" class="form-control" id="formula" name="formula"/>
+                </div>
+                </div>
+
+                <button type="button" id="submit" name="submit" class="btn btn-default btn-lg">ذخیره</button>
+                <a href="{% url 'manager:criterion_page' %}" type="button" class="btn btn-default btn-lg">بازگشت</a>
+            </form>
+        </div>
+    </div>
+{% endblock content %}

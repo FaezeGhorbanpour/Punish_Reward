@@ -2,13 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
-    {% load i18n %}
-
-    {% block title %}
-    {% endblock %}
-
-    {% load static %}
+    <title>Title</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="{% static "css/base.css" %}"/>
@@ -16,13 +10,32 @@
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-    <script src="{% static "SlideUp.js"%}"></script>
-
-    {% block special_static %}
-    {% endblock %}
+    <script src="../static/SlideUp.js"></script>
 </head>
 <body>
-{% block body_block %}
-{% endblock %}
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-2">
+      1 of 3
+    </div>
+    <div class="col-md-auto">
+      Variable width content
+    </div>
+    <div class="col col-lg-2">
+      3 of 3
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      1 of 3
+    </div>
+    <div class="col-md-auto">
+      Variable width content
+    </div>
+    <div class="col col-lg-2">
+      3 of 3
+    </div>
+  </div>
+</div>
 </body>
 </html>

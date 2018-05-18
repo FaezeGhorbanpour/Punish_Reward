@@ -1,4 +1,4 @@
-{% extends 'master/master.html' %}
+{% extends 'evaluator/evaluator.html' %}
 
 
 
@@ -13,7 +13,7 @@
     $(function() {
         $("tr").click(function(e) { // limit click to children of mainmenue
             $("#actions").removeClass('hide').addClass('show');
-            var name = $(this).find('td').get(1).innerHTML;
+            var name = $(this).find('td').get(2).innerHTML;
             console.log(name);
             $('.overlay').css("opacity", "0.5");
             document.getElementById('criterion').innerHTML = name;
@@ -33,44 +33,45 @@
 
 
 {% block content %}
-    <h2 class="page_title">لیست معیارها</h2>
+    <h2 class="page_title">لیست کارمندان</h2>
     <div class="cont">
         <table class="overlay">
         <tr>
             <th>ردیف</th>
+            <th>واحد</th>
+            <th>کدپرسنلی</th>
             <th>نام</th>
-            <th>نوع</th>
+            <th>نام خانوادگی</th>
         </tr>
             <tr>
                 <td>1</td>
-                <td>همکاری1</td>
-                <td>کیفی</td>
+                <td>1</td>
+                <td>93105512</td>
+                <td>مهدیه</td>
+                <td>بهروزی فر</td>
             </tr>
             <tr>
                 <td>2</td>
-                <td>همکاری2</td>
-                <td>کیفی</td>
+                <td>1</td>
+                <td>93111558</td>
+                <td>صابره</td>
+                <td>فائز</td>
             </tr>
             <tr>
                 <td>3</td>
-                <td>همکاری3</td>
-                <td>کیفی</td>
+                <td>1</td>
+                <td>93105494</td>
+                <td>حانیه</td>
+                <td>برغی</td>
             </tr>
 
     </table>
 <div id="actions" class="hide">
     <li id="criterion">
     </li>
-    <li class="action"><a href="{% url 'master:choose_evaluation_way' %}">تعیین روش ارزیابی</a></li>
-    <li class="action">
-    ویرایش روش ارزیابی
-    </li>
-    <li class="action">
-    تعیین روش پاداش و تنبیه
-    </li>
-    <li class="action">
-    ویرایش روش پاداش و تنبیه
-    </li>
+    <li class="action"><a href="{% url 'evaluator:evaluation' %}">ارزیابی</a></li>
+    <li class="action"><a href="{% url 'evaluator:enter_var_values' %}">مقداردهی</a></li>
+
 </div>
     </div>
 

@@ -1,0 +1,63 @@
+{% extends 'master/master.html' %}
+
+
+{% block special_static %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "css/main.css" %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static "css/form.css" %}"/>
+{% endblock special_static %}
+
+
+{% block content %}
+    <h2 class="page_title">بررسی درخواست بازنگری</h2>
+    <div class="col-md-8 center_view">
+        <div class="form-area">
+            <form role="form">
+                <br style="clear:both">
+
+
+
+                <div class="form-group">
+                    <label for="input_number">کد پرسنلی</label>
+                    <input disabled type="number" class="form-control" id="input_number" placeholder="93105512" name="input_number"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="input_number">نام و نام خانوادگی</label>
+                    <input disabled type="number" class="form-control" id="input_number" placeholder="مهدیه بهروزی فر" name="input_number"/>
+                </div>
+                <div class="form-group">
+                    <label for="input_number">عنوان</label>
+                    <input disabled type="number" class="form-control" id="input_number" name="input_number" placeholder="اشتباه در محاسبه"/>
+                </div>
+                <div class="form-group">
+                    <label for="input_number">توضیحات</label>
+                    <input disabled type="number" class="form-control" id="input_number" placeholder="در محاسبه فرمول مشکلی رخ داده است" name="input_number"/>
+                </div>
+                <div class="form-group">
+                    <label for="formula">نام معیار</label>
+                    <input type="text" disabled class="form-control" id="formula" placeholder="حقوق" name="formula"/>
+                </div>
+                <div class="form-group">
+                    <label for="var1">ارزیاب 1</label>
+                    <select name="var1" class="form-control">
+                        <option value="">صابره فائز</option>
+                        <option value="">حانیه برغی</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="var1">ارزیاب 2</label>
+                    <select name="var1" class="form-control">
+                        <option value="">صابره فائز</option>
+                        <option value="">حانیه برغی</option>
+                    </select>
+                </div>
+
+
+                <button type="button" id="submit" name="submit" class="btn btn-default btn-lg" onclick="alert('ارزیاب 2 به لیست ارزیابی کنندگان اضافه شد!')">ذخیره</button>
+                <button type="button" id="submit" name="submit" class="btn btn-default btn-lg">رد</button>
+                <a href="{% url 'manager:criterion_page' %}" type="button" class="btn btn-default btn-lg">بازگشت</a>
+            </form>
+        </div>
+    </div>
+{% endblock content %}

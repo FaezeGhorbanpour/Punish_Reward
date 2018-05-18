@@ -1,0 +1,81 @@
+{% extends 'evaluator/evaluator.html' %}
+
+
+
+
+
+{% block special_static %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "css/main.css" %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static "css/table.css" %}"/>
+{#    <link rel="stylesheet" type="text/css" href="{% static "css/table_5_columns.css" %}"/>#}
+    <script>
+    $(function() {
+        $("tr").click(function(e) { // limit click to children of main menu
+            $("#actions").removeClass('hide').addClass('show');
+            var name = $(this).find('td').get(2).innerHTML;
+            console.log(name);
+            $('.overlay').css("opacity", "0.5");
+            document.getElementById('criterion').innerHTML = name;
+            e.stopPropagation();
+        });
+        $(document).on('click','*',function(e){
+            e.stopPropagation();
+
+            $("#actions").removeClass('show').addClass('hide');
+            $('.overlay').css("opacity", "1");
+        });
+
+
+    });
+    </script>
+{% endblock special_static %}
+
+
+{% block content %}
+    <h2 class="page_title">ارزیابی کارمند مهدیه بهروزی فر</h2>
+    <div class="col-md-8 center_view" style="min-width: 440px;    background-color: #FAFAFA;    box-shadow: 0 0 0.5em #000;margin-top:50px;
+    border: 1px solid GREY;">
+        <table class="overlay">
+                        <tr>
+                            <th>ردیف</th>
+                            <th>نام متغییر</th>
+                            <th>مقدار</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>ساعت کاری در یک روز</td>
+                            <td><input type="number" disabled placeholder="5" style="margin:auto;width:100px" class="form-control" id="input_number" name="input_number"/></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>ساعت فوق العاده</td>
+                            <td><input type="number" disabled placeholder="6" style="margin:auto;width:100px" class="form-control" id="input_number" name="input_number"/></td>
+
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>متغییر 3</td>
+                            <td><input type="number" disabled placeholder="7" style="margin:auto;width:100px" class="form-control" id="input_number" name="input_number"/></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>متغییر 4</td>
+                            <td><input type="number" disabled placeholder="8" style="margin:auto;width:100px" class="form-control" id="input_number" name="input_number"/></td>
+                        </tr>
+                    </table>
+        <div class="form-area">
+            <form role="form">
+                <br style="clear:both">
+
+{#                <div class="cont">#}
+
+{#                </div>#}
+                <button type="button" id="submit" name="submit" class="btn btn-default btn-lg">ذخیره</button>
+                <a href="{% url 'manager:criterion_page' %}" type="button" class="btn btn-default btn-lg">بازگشت</a>
+            </form>
+        </div>
+    </div>
+
+
+{% endblock content %}

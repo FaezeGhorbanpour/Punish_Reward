@@ -1,4 +1,4 @@
-{% extends 'master/master.html' %}
+{% extends 'manager/manager.html' %}
 
 
 
@@ -38,21 +38,25 @@
         <table class="overlay">
         <tr>
             <th>ردیف</th>
+            <th>واحد</th>
             <th>نام</th>
             <th>نوع</th>
         </tr>
             <tr>
+                <td>1</td>
                 <td>1</td>
                 <td>همکاری1</td>
                 <td>کیفی</td>
             </tr>
             <tr>
                 <td>2</td>
+                <td>1</td>
                 <td>همکاری2</td>
                 <td>کیفی</td>
             </tr>
             <tr>
                 <td>3</td>
+                <td>1</td>
                 <td>همکاری3</td>
                 <td>کیفی</td>
             </tr>
@@ -61,13 +65,10 @@
 <div id="actions" class="hide">
     <li id="criterion">
     </li>
-    <li class="action"><a href="{% url 'master:choose_evaluation_way' %}">تعیین روش ارزیابی</a></li>
     <li class="action">
     ویرایش روش ارزیابی
     </li>
-    <li class="action">
-    تعیین روش پاداش و تنبیه
-    </li>
+        <li class="action"><a href="{% url 'manager:choose_punish_reward' %}">تعیین روش پاداش و تنبیه</a></li>
     <li class="action">
     ویرایش روش پاداش و تنبیه
     </li>

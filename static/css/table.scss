@@ -1,88 +1,59 @@
 
-
 table {
-  font-size: 120%;
-  direction: rtl;
-  text-align: center;
-  box-sizing: border-box;
-  overflow: hidden;
-  margin: 2em auto;
-  border-collapse: collapse;
-  min-width: 23em;
-  width: 70%;
-  max-width: 56em;
-  border-radius: .5em;
-  box-shadow: 0 0 .5em #000;
 
-      .imglink{
-        width: 60px;
-        height:60px;
-        margin:0;
-        padding: 0;
-      }
+    border-collapse: collapse;
+    min-width: 23em;
+    width: 80%;
+    max-width: 56em;
+    font-size: 120%;
+    margin: 0 auto;
+    margin-top: 30px;
+    box-shadow: 0 0 .5em #000;
+    padding: .5em 1em;
+}
 
-
+th, td {
+    text-align: center;
+    padding: 8px;
 
 }
 
-thead {
-  background: linear-gradient(#606062, #28262b);
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  cursor: pointer;
-}
+tr:nth-child(even){background-color: #f2f2f2}
 
 th {
-  text-align: center;
+  background: linear-gradient(#606062, #28262b);
+  font-weight: 700;
 }
-
-tbody {
-  display: flex;
-  flex-direction: column;
+td{
   color: #000;
 }
-
-tr {
-  display: block;
-  overflow: hidden;
-  width: 100%;
+.hide{
+  display: none;
 }
 
-.odd {
-  background: linear-gradient(#eee 1px, #ddd 1px, #ccc calc(100% - 1px), #999 calc(100% - 1px));
+.show{
+  display: inline;
 }
-
-.even {
-  background: linear-gradient(#eee 1px, #bbb 1px, #aaa calc(100% - 1px), #999 calc(100% - 1px));
+#actions{
+  position: absolute;
+  color: black;
+  width: 20%;
+  margin: 0 auto;
+  background-color:#f2f2f2;
+  box-shadow: 0 0 .5em #000;
+  z-index: 10;
+  top: 83px;
+    left: 40%;
+  list-style-type: none;
 }
-
-[class*='prop__'] {
-  float: right;
+.action{
+  padding: 5px;
+}
+.cont{
   position: relative;
-  padding: .5em 1em;
-  width: 40%;
-
-  &:last-child {
-    width: 20%;
-  }
-
+}
+#criterion{
+  background-color: #606062;
+  color: white;
 }
 
-
-.btn {
-  margin: .2em .1em; // Demo Only
-  font-family: "Open Sans", sans-serif;
-  font-weight: 700;
-  font-size: 1em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  border: none;
-  border-bottom: .15em solid black;
-  border-radius: 3px;
-  padding: 0.65em 1.3em;
-}
-
-.btn-lg {
-  padding: 1em 2em;
-}

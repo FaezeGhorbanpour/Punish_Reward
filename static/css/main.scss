@@ -14,11 +14,13 @@ body, html {
     color: #fff;
     .main_content {
       display: grid;
+      float: none;
+      margin: 0 auto;
       .btn-default {
         padding: 10px;
         float: left;
-        max-width: 20%;
         margin: 5% auto;
+
       }
 
     }

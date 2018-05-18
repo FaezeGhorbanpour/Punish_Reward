@@ -1,0 +1,23 @@
+{% extends 'main.html' %}
+
+{% block special_static %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "css/main.css" %}"/>
+
+{% endblock special_static %}
+
+
+{% block menu %}
+    <li>
+        <a href="#">واحد</a>
+          <ul class="noJS">
+            <li><a href="{% url 'evaluator:view_employees' %}">مشاهده ارزیابی شوندگان</a></li>
+            <li><a href="{% url 'evaluator:check_re-evaluation_request' %}">بررسی درخواست ارزیابی مجدد</a></li>
+          </ul>
+    </li>
+    <li><a href="/logout/">خروج</a></li>
+{% endblock menu %}
+
+
+
+

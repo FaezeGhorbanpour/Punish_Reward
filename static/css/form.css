@@ -8,9 +8,8 @@
   overflow: hidden;
   border-collapse: collapse;
   min-width: 23em;
-  width: 70%;
+  width: 80%;
   max-width: 56em;
-  border-radius: .5em;
   box-shadow: 0 0 .5em #000;
   background-color: #FAFAFA;
   padding: 10px 40px 20px;
@@ -20,5 +19,8 @@
   .form-area label {
     float: right;
     min-width: 20%; }
+
+.keyfi {
+  display: none; }
 
 /*# sourceMappingURL=form.css.map */
