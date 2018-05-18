@@ -1,4 +1,4 @@
-{% extends 'evaluator/evaluator.html' %}
+{% extends 'employee/employee.html' %}
 
 
 
@@ -11,7 +11,7 @@
 {#    <link rel="stylesheet" type="text/css" href="{% static "css/table_5_columns.css" %}"/>#}
     <script>
     $(function() {
-        $("tr").click(function(e) { // limit click to children of main menu
+        $("tr").click(function(e) { // limit click to children of mainmenue
             $("#actions").removeClass('hide').addClass('show');
             var name = $(this).find('td').get(2).innerHTML;
             console.log(name);
@@ -33,48 +33,16 @@
 
 
 {% block content %}
-    <h2 class="page_title">ارزیابی کارمند مهدیه بهروزی فر</h2>
-    <div class="col-md-16 center_view" style="min-width: 440px;    background-color: #FAFAFA;    box-shadow: 0 0 0.5em #000;margin-top:50px;
-    border: 1px solid GREY;">
-        <table class="overlay">
-                        <tr>
-                            <th>ردیف</th>
-                            <th>نام متغییر</th>
-                            <th>مقدار</th>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>ساعت کاری در یک روز</td>
-                            <td><input type="number" disabled placeholder="5" style="margin:auto;width:100px" class="form-control" id="input_number" name="input_number"/></td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>ساعت فوق العاده</td>
-                            <td><input type="number" disabled placeholder="6" style="margin:auto;width:100px" class="form-control" id="input_number" name="input_number"/></td>
-
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>متغیر 3</td>
-                            <td><input type="number" disabled placeholder="7" style="margin:auto;width:100px" class="form-control" id="input_number" name="input_number"/></td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>متغیر 4</td>
-                            <td><input type="number" disabled placeholder="8" style="margin:auto;width:100px" class="form-control" id="input_number" name="input_number"/></td>
-                        </tr>
-                    </table>
-        <div class="form-area">
-            <form role="form">
-                <br style="clear:both">
-
-                <table class="overlay">
+    <h2 class="page_title">لیست کارمندان</h2>
+    <div class="cont">
+       <table class="overlay">
                         <tr>
                             <th>ردیف</th>
                             <th>نام معیار</th>
                             <th>فرمول</th>
                             <th>متغیرها</th>
                             <th>نتیجه ارزیابی</th>
+                            <th>درخواست بازنگری</th>
                         </tr>
                         <tr>
                             <td>1</td>
@@ -86,7 +54,8 @@
                                 <tr><td>ساعت کاری در یک روز</td></tr>
                                 </table>
                             </td>
-                            <td><input type="number"  style="margin:auto;width:100px" class="form-control" id="input_number" name="input_number"/></td>
+                            <td><input type="number" disabled placeholder="5" style="margin:auto;width:100px" class="form-control" id="input_number" name="input_number"/></td>
+                            <td><button type="button" id="check" style="float: none" name="check" class="btn btn-default btn-lg" onclick="window.location.href='{% url 'employee:review_request' %}'">ایجاد</button></td></td>
                         </tr>
                         <tr>
                             <td>1</td>
@@ -98,7 +67,9 @@
                                 <tr><td>ساعت کاری در یک روز</td></tr>
                                 </table>
                             </td>
-                            <td><input type="number"  style="margin:auto;width:100px" class="form-control" id="input_number" name="input_number"/></td>
+                            <td><input type="number" disabled placeholder="6" style="margin:auto;width:100px" class="form-control" id="input_number" name="input_number"/></td>
+                            <td><button type="button" id="check" style="float: none" name="check" class="btn btn-default btn-lg" onclick="window.location.href='{% url 'employee:review_request' %}'">ایجاد</button></td></td>
+
                         </tr>
                         <tr>
                             <td>1</td>
@@ -110,7 +81,9 @@
                                 <tr><td>ساعت کاری در یک روز</td></tr>
                                 </table>
                             </td>
-                            <td><input type="number"  style="margin:auto;width:100px" class="form-control" id="input_number" name="input_number"/></td>
+                            <td><input type="number" disabled placeholder="7" style="margin:auto;width:100px" class="form-control" id="input_number" name="input_number"/></td>
+                            <td><button type="button" id="check" style="float: none" name="check" class="btn btn-default btn-lg" onclick="window.location.href='{% url 'employee:review_request' %}'">ایجاد</button></td></td>
+
                         </tr>
                         <tr>
                             <td>1</td>
@@ -122,14 +95,11 @@
                                 <tr><td>ساعت کاری در یک روز</td></tr>
                                 </table>
                             </td>
-                            <td><input type="number"  style="margin:auto;width:100px" class="form-control" id="input_number" name="input_number"/></td>
+                            <td><input type="number" disabled placeholder="8" style="margin:auto;width:100px" class="form-control" id="input_number" name="input_number"/></td>
+                            <td><button type="button" id="check" style="float: none" name="check" class="btn btn-default btn-lg" onclick="window.location.href='{% url 'employee:review_request' %}'">ایجاد</button></td></td>
+
                         </tr>
                     </table>
-                <button type="button" id="submit" name="submit" class="btn btn-default btn-lg">ذخیره</button>
-                <a href="{% url 'manager:criterion_page' %}" type="button" class="btn btn-default btn-lg">بازگشت</a>
-            </form>
-        </div>
     </div>
-
 
 {% endblock content %}

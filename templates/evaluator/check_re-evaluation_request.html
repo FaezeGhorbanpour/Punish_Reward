@@ -9,7 +9,7 @@
 
 
 {% block content %}
-    <h2 class="page_title">تصمیم گیری نهایی برای درخواست ارزیابی مجدد مهدیه بهروزی فر</h2>
+    <h2 class="page_title">بررسی درخواست ارزیابی مجدد مهدیه بهروزی فر</h2>
     <div class="col-md-8 center_view">
         <div class="form-area">
             <form role="form">
@@ -38,35 +38,19 @@
                     <label for="formula">نام معیار</label>
                     <input type="text" disabled class="form-control" id="formula" placeholder="حقوق" name="formula"/>
                 </div>
-                <div class="form-group">
-                    <label for="var1">ارزیاب 1</label>
-                    <input type="text" disabled class="form-control" id="formula" placeholder="حانیه برغی" name="formula"/>
 
-                </div>
-                 <div class="form-group">
-                    <label for="var1"> نتیجه ارزیاب 1</label>
-                    <input type="number" disabled class="form-control" id="formula" placeholder="5" name="formula"/>
-
-                </div>
                 <div class="form-group">
-                    <label for="var1">ارزیاب 2</label>
+                    <label for="var1">ارزیاب دیگر</label>
                     <input type="text" disabled class="form-control" id="formula" placeholder="صابره فائز" name="formula"/>
 
                 </div>
                 <div class="form-group">
-                    <label for="var1">نتیجه ارزیاب 2</label>
+                    <label for="var1">نتیجه ارزیاب دیگر</label>
                     <input type="number" disabled class="form-control" id="formula" placeholder="7" name="formula"/>
 
                 </div>
 
-
-                <div class="form-group">
-                    <label for="var1">ارزیابی نهایی</label>
-                    <input type="number"  class="form-control" id="formula"  name="formula"/>
-
-                </div>
-
-                <button type="button" id="submit" name="submit" class="btn btn-default btn-lg" >ذخیره</button>
+                <button type="button" id="submit" name="submit" class="btn btn-default btn-lg" onclick="window.location.href='{% url 'evaluator:evaluation' %}'" >ارزیابی</button>
                 <a href="{% url 'manager:criterion_page' %}" type="button" class="btn btn-default btn-lg">بازگشت</a>
             </form>
         </div>

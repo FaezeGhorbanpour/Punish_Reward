@@ -12,7 +12,16 @@
         <a href="#">واحد</a>
           <ul class="noJS">
             <li><a href="{% url 'evaluator:view_employees' %}">مشاهده ارزیابی شوندگان</a></li>
+            <li><a href="{% url 'evaluator:enter_var_values' %}">وارد کردن مقادیر متغییرها</a></li>
             <li><a href="{% url 'evaluator:check_re-evaluation_request' %}">بررسی درخواست ارزیابی مجدد</a></li>
+            <li><a href="{% url 'evaluator:evaluation' %}">ارزیابی</a></li>
+          </ul>
+    </li>
+    <li>
+        <a href="#">معیار</a>
+          <ul class="noJS">
+            <li><a href="{% url 'manager:view_criteria' %}">مشاهده معیارها</a></li>
+
           </ul>
     </li>
     <li><a href="/logout/">خروج</a></li>

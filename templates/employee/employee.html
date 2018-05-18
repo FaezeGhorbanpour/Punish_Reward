@@ -1,0 +1,23 @@
+{% extends 'main.html' %}
+
+{% block special_static %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "css/main.css" %}"/>
+
+{% endblock special_static %}
+
+
+{% block menu %}
+    <li>
+        <a href="#">واحد</a>
+          <ul class="noJS">
+            <li><a href="{% url 'employee:enter_var_values' %}">مقداردهی</a></li>
+            <li><a href="{% url 'employee:view_evaluations' %}">مشاهده ارزیابی‌ها</a></li>
+          </ul>
+    </li>
+    <li><a href="/logout/">خروج</a></li>
+{% endblock menu %}
+
+
+
+

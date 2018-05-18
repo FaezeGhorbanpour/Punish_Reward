@@ -18,15 +18,23 @@ th, td {
 
 }
 
-tr:nth-child(even){background-color: #f2f2f2}
 
+tr{
+  background-color: #333;
+}
 th {
   background: linear-gradient(#606062, #28262b);
   font-weight: 700;
 }
 td{
-  color: #000;
+  color: white;
 }
+tr:nth-child(even){background-color: #f2f2f2;
+  td{
+    color: black
+  }
+}
+
 .hide{
   display: none;
 }
@@ -57,3 +65,19 @@ td{
   color: white;
 }
 
+.in_line_table{
+  tr{
+    background-color:inherit;
+    td{
+      color: inherit;
+    }
+
+  }
+    min-width: 0;
+    width: initial;
+    max-width: none;
+    font-size: 100%;
+    margin: 0 auto;
+    box-shadow: none;
+    padding: 0px;
+}

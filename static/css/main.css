@@ -21,7 +21,7 @@ body, html {
         float: left;
         margin: 5% auto; }
   body .page_title, html .page_title {
-    padding: 25% 5% 0 5%; }
+    padding: 17% 5% 0 5%; }
 
 @media (min-width: 768px) {
   .container .full {

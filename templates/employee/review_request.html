@@ -1,0 +1,30 @@
+{% extends 'employee/employee.html' %}
+
+
+{% block special_static %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "css/main.css" %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static "css/form.css" %}"/>
+{% endblock special_static %}
+
+
+{% block content %}
+    <h2 class="page_title">درخواست بازنگری برای معیار حقوق</h2>
+    <div class="col-md-8 center_view">
+        <div class="form-area">
+            <form role="form">
+                <br style="clear:both">
+                <div class="form-group">
+                    <label for="name">عنوان</label><input type="text" class="form-control" id="name" name="name"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">دلیل</label><input type="text" class="form-control" id="name" name="name"/>
+                </div>
+
+                <button type="button" id="submit" name="submit" class="btn btn-default btn-lg">ذخیره</button>
+                <a href="{% url 'manager:criterion_page' %}" type="button" class="btn btn-default btn-lg">بازگشت</a>
+            </form>
+        </div>
+    </div>
+{% endblock content %}
