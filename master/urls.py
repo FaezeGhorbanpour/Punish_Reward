@@ -4,19 +4,19 @@ from . import views
 
 app_name = 'master'
 urlpatterns = [
-url(r'^check_review_request', views.check_review_request, name='check_review_request'),
-    url(r'^view_review_requests', views.view_review_requests, name='view_review_requests'),
-    url(r'^view_employees', views.view_employees, name='view_employees'),
-    url(r'^choose_evaluation_way', views.choose_evaluation_way, name='choose_evaluation_way'),
-    url(r'^criterion_page', views.show_criterion_page, name='criterion_page'),
-    url(r'^add_criterion', views.add_criterion, name='add_criterion'),
-    url(r'^add_employees', views.add_employees_page, name='add_employees'),
-    url(r'^criterion_page', views.show_criterion_page, name='criterion_page'),
-    url(r'^add_criterion', views.add_criterion, name='add_criterion'),
+    url(r'^add_employee', views.add_employee, name='add_employee'),
 
-    url(r'^edit_punish', views.edit_punish_page, name='edit_punish'),
-    url(r'^add_punish', views.add_punish_page, name='add_punish'),
-    url(r'^punish_page', views.show_punish_page, name='punish_page'),
-    url(r'^employees_page', views.show_employees_page, name='employees_page'),
+    url(r'^view_evaluator', views.view_evaluator, name='view_evaluator'),
+    url(r'^view_re-evaluation_request', views.view_reevaluation_request, name='view_re-evaluation_request'),
+    url(r'^choose_final_evaluation', views.choose_final_evaluation,name='choose_final_evaluation'),
+    url(r'^view_employees', views.view_employees, name='view_employees'),
+    url(r'^add_evaluator', views.add_evaluator, name='add_evaluator'),
+    url(r'^choose_punish_reward', views.choose_punish_reward, name='choose_punish_reward'),
+    url(r'^view_criteria', views.view_criteria, name='view_criteria'),
+    url(r'^edit_master', views.edit_master_page, name='edit_master'),
+    url(r'^add_criterion', views.add_criterion_page, name='add_criterion'),
+    url(r'^each_request', views.show_each_request, name='each_request'),
+    url(r'^request_page', views.show_request_page, name='request_page'),
+    url(r'^criterion_page', views.show_criterion_page, name='criterion_page'),
     url(r'^', views.show_master_page, name='master_first_page'),
 ]

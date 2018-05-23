@@ -1,4 +1,4 @@
-{% extends 'manager/manager.html' %}
+{% extends 'master/master.html' %}
 
 
 
@@ -33,49 +33,42 @@
 
 
 {% block content %}
-    <h2 class="page_title">لیست ارزیابی کنندگان</h2>
+    <h2 class="page_title">لیست معیارها</h2>
     <div class="cont">
         <table class="overlay">
         <tr>
             <th>ردیف</th>
             <th>واحد</th>
-            <th>کدپرسنلی</th>
             <th>نام</th>
-            <th>نام خانوادگی</th>
+            <th>نوع</th>
         </tr>
             <tr>
                 <td>1</td>
                 <td>1</td>
-                <td>93105512</td>
-                <td>مهدیه</td>
-                <td>بهروزی فر</td>
+                <td>همکاری1</td>
+                <td>کیفی</td>
             </tr>
             <tr>
                 <td>2</td>
                 <td>1</td>
-                <td>93111558</td>
-                <td>صابره</td>
-                <td>فائز</td>
+                <td>همکاری2</td>
+                <td>کیفی</td>
             </tr>
             <tr>
                 <td>3</td>
                 <td>1</td>
-                <td>93105494</td>
-                <td>حانیه</td>
-                <td>برغی</td>
+                <td>همکاری3</td>
+                <td>کیفی</td>
             </tr>
 
     </table>
 <div id="actions" class="hide">
     <li id="criterion">
     </li>
-    <li class="action"><a href="{% url 'master:choose_evaluation_way' %}">تعیین روش ارزیابی</a></li>
     <li class="action">
     ویرایش روش ارزیابی
     </li>
-    <li class="action">
-    تعیین روش پاداش و تنبیه
-    </li>
+        <li class="action"><a href="{% url 'master:choose_punish_reward' %}">تعیین روش پاداش و تنبیه</a></li>
     <li class="action">
     ویرایش روش پاداش و تنبیه
     </li>

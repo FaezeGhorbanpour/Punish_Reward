@@ -11,18 +11,15 @@
     <li>
         <a href="#">واحد</a>
           <ul class="noJS">
-            <li><a href="{% url 'manager:view_employees' %}">مشاهده کارمندان</a></li>
-              <li><a href="{% url 'manager:view_evaluator' %}">مشاهده ارزیابی کنندگان</a></li>
-
-            <li><a href="{% url 'manager:add_evaluator' %}">افزودن ارزیابی کننده</a></li>
-               <li><a href="{% url 'manager:add_employee' %}">افزودن کارمند</a></li>
-              <li><a href="{% url 'manager:view_re-evaluation_request' %}">مشاهده درخواست های ارزیابی مجدد</a></li>
+            <li><a href="{% url 'manager:view_employees' %}">مشاهده کارمندان واحد</a></li>
+            <li><a href="{% url 'manager:view_review_requests' %}">بررسی درخواست بازنگری</a></li>
           </ul>
     </li>
     <li>
         <a href="#">معیار</a>
           <ul class="noJS">
-            <li><a href="{% url 'manager:view_criteria' %}">مشاهده معیارها</a></li>
+            <li><a href="{% url 'manager:add_criterion' %}">افزودن معیار</a></li>
+              <li><a href="{% url 'manager:criterion_page' %}">تعیین روش ارزیابی معیار</a></li>
 
           </ul>
     </li>
